@@ -206,7 +206,7 @@ const initReservesByHelper = async (
       await configurator.batchInitReserve(
         [chunkedInitInputParams[chunkIndex][0]],
         {
-          gasPrice: 0,
+          gasPrice: 1000,
           gasLimit: 12000000,
         }
       )
@@ -346,7 +346,7 @@ const configureReservesByHelper = async (
           chunkedInputParams[chunkIndex],
           {
             gasLimit: 1200000000,
-            gasPrice: 0,
+            gasPrice: 1000,
           }
         )
       );

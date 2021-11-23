@@ -19,7 +19,7 @@ export async function deployTestToken(
   const deploymentReceipt = await deploymentResult.wait();
 
   const usdcERC = await connectErc20(deploymentReceipt.contractAddress, deployer);
-  const res = await usdcERC.mint(admin, initAmount, { gasLimit: 12000000, gasPrice: 0 });
+  const res = await usdcERC.mint(admin, initAmount, { gasLimit: 12000000, gasPrice: 1000 });
   await res.wait();
   return usdcERC.address;
 }

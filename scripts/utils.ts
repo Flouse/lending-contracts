@@ -30,7 +30,7 @@ const httpProvider = new PolyjuiceHttpProvider(Config.nervos.godwoken.rpcUrl, po
 
 const web3Provider = new providers.Web3Provider(httpProvider);
 
-export const GAS_PRICE = 0;
+export const GAS_PRICE = 1000;
 export const GAS_LIMIT = 12000000;
 
 export const transactionOverrides: Overrides = {
